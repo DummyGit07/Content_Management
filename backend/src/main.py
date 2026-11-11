@@ -11,7 +11,7 @@ app = FastAPI()
 origins = [
     "http://localhost:5173",  # Vite local dev
     "http://127.0.0.1:5173",  # Vite local dev
-    # vercel base url
+    "https://content-management-lyart.vercel.app", # vercel base url
 ]
 
 app.add_middleware(
