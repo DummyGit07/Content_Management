@@ -4,6 +4,7 @@ from src.schemas import contact, user
 from src.database.db import engine, Base
 from src.routers.register import router as register_router
 from src.routers.login import router as login_router
+from src.routers.contacts import router as contacts_router
 
 app = FastAPI()
 
@@ -26,6 +27,7 @@ Base.metadata.create_all(bind=engine)
 
 app.include_router(register_router)
 app.include_router(login_router)
+app.include_router(contacts_router)
 
 @app.get("/")
 def test():
